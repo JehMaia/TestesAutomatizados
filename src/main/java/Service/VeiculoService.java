@@ -55,5 +55,8 @@ public class VeiculoService {
     public <veiculo> veiculo buscaVeiculo(String placa) {
         return null;
     }
+
+    public Veiculo cadastrarveiculo(String modelo, String placa) {
+    }
 }
 

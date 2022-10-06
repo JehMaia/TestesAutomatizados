@@ -15,6 +15,9 @@ public class AluguelService {
 
     private VeiculoService veiculoServiceService = new VeiculoService();
 
+    public static Aluguel cadastrarAluguel(String a3369J8, String astra, boolean b) {
+    }
+
     public <veiculo> Aluguel cadastrarVeiculo(String modelo, String placa) {
         VeiculoService veiculoService = null;
         veiculo veiculo = veiculoService.buscaVeiculo(placa);
@@ -32,11 +35,11 @@ public class AluguelService {
         return aluguel;
     }
 
-    public List<Aluguel> listarAluguel() {
+    public static List<Aluguel> listarAluguel() {
         return aluguelList;
     }
 
-    public boolean finalizarAluguel(String placa) {
+    public static boolean finalizarAluguel(String placa) {
         Optional<Aluguel> aluguelOptional = aluguelList
                 .stream()
                 .filter(e -> e.getVeiculoAlugado().isDisponivel().getplaca().equals(placa)) //Não entendi porque não veio o getplaca
@@ -52,7 +55,7 @@ public class AluguelService {
     }
 
 
-    public Aluguel cadastrarAluguel() {
+    public static Aluguel cadastrarAluguel() {
         return null;
     }
 }
